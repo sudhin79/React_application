@@ -1,0 +1,84 @@
+.add {
+  max-width: 7000px;
+  margin: 30px auto;
+  padding: 25px;
+  /* background-color: #fff; */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-img-upload label {
+  cursor: pointer;
+  display: inline-block;
+  max-width: 150px;
+}
+
+.add-img-upload img {
+  width: 100%;
+  border: 2px dashed #a5cf0d;
+  border-radius: 8px;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.add input[type="text"],
+.add input[type="number"],
+.add textarea,
+.add select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.add input:focus,
+.add textarea:focus,
+.add select:focus {
+  border-color: #3f51b5;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.add-category,
+.add-price {
+  flex: 1;
+  min-width: 200px;
+}
+
+.add-btn {
+  background-color: #030303;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #1f1f22;
+}
+@media (max-width: 600px) {
+  .add-category-price {
+    flex-direction: column;
+  }
+}

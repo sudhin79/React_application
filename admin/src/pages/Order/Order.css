@@ -1,0 +1,56 @@
+.order-page {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.order-page h2 {
+  margin-bottom: 20px;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #00000010;
+}
+
+.order-left {
+  display: flex;
+  gap: 15px;
+}
+
+.order-icon {
+  font-size: 40px;
+  color: #ff8c00;
+}
+
+.order-details {
+  line-height: 1.5;
+}
+
+.order-items {
+  margin-bottom: 8px;
+}
+
+.order-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.order-status {
+  padding: 8px 12px;
+  border: 1px solid #fcbf49;
+  background-color: #fff0e1;
+  border-radius: 5px;
+  color: #d97706;
+  font-weight: bold;
+  cursor: pointer;
+}

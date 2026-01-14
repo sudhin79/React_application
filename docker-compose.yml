@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: sahil1112/react-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
+
+  backend:
+    image: sahil1112/node-backend:latest
+    ports:
+      - "4000:4000"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/appdb
+    depends_on:
+      - mongo
+    networks:
+      - appnet
+
+  mongo:
+    image: mongo:6
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - appnet
+
+volumes:
+  mongo_data:
+
+networks:
+  appnet:
+
