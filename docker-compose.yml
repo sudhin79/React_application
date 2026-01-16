@@ -2,16 +2,17 @@ version: "3.8"
 
 services:
   frontend:
-    image: sahil1112/react-frontend:latest
+    build: ./fruntend
     ports:
       - "80:80"
     depends_on:
       - backend
     networks:
       - appnet
+    restart: always
 
   backend:
-    image: sahil1112/node-backend:latest
+    build: ./backend
     ports:
       - "4000:4000"
     environment:
@@ -20,6 +21,7 @@ services:
       - mongo
     networks:
       - appnet
+    restart: always
 
   mongo:
     image: mongo:6
@@ -27,6 +29,7 @@ services:
       - mongo_data:/data/db
     networks:
       - appnet
+    restart: always
 
 volumes:
   mongo_data:

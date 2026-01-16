@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
   res.send("📡📡📡📡📡📡📡📡📡 API Working 📡📡📡📡📡📡📡📡📡");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started: http://localhost:${PORT}`);
+app.listen(PORT,"0.0.0.0", () => {
+  console.log(`started on port ${PORT}`);
 });
